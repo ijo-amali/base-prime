@@ -38,7 +38,7 @@ for l = 0:(length(registry) - 1)
             for o = 0:(length(registry) - 1)
                 for p = 0:(length(registry) - 1)
                     radix = fiveDigitRadix(l,m,n,o,p);
-                    if isInteger(radix)
+                    if isInteger(radix) | floor(radix) == radix
                         printFiveDigitResult(l,m,n,o,p,radix)
                     end
                 end
